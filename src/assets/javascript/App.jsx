@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Main from './components/Main';
 import '../stylesheets/App.css';
 
-function App() {
-  return (
-    <div className="App">
 
-    </div>
-  );
+class App extends Component {
+  constructor( props ) {
+    super( props );
+
+    this.state = ({
+      title: 'Grameme',
+    });
+  }
+
+  render() {
+
+    return (
+      <div className="App">
+        <title>{this.state.title}</title>
+        <Main title={this.state.title} />
+      </div>
+    );
+  }
 }
 
 export default App;
