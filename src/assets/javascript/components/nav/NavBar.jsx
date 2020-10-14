@@ -12,22 +12,26 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
-        <ul>
-          <li className="flex">
-            Home (Logo)
-          </li>
-          <li className="flex">
-            2
-          </li>
-          <li className="flex">
-            3
-          </li>
-          <li className="flex">
-            4
-          </li>
+      <>
+        <ul className="nav-container">
+          <div className="flex-left">
+            <li className="logo">
+              Grameme
+            </li>
+          </div>
+          <div className="flex">
+            <li>
+              
+            </li>
+            <li>
+              Log in
+            </li>
+            <li>
+              Sign up
+            </li>
+          </div>
         </ul>
-      </div>
+      </>
     );
   }
 }

@@ -1,4 +1,21 @@
-ul {
+.nav-container div:last-child {
+  font-size: 18px;
+
+}
+
+.nav-container {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(158,158,158,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(158,158,158,1);
+box-shadow: 0px 0px 5px 0px rgba(158,158,158,1);
+  position: sticky;
+}
+
+.nav-container div {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+ul, .flex {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -6,11 +23,23 @@ ul {
   /* flex-direction: row;
   flex-wrap: nowrap; */
   flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items:stretch;
+  justify-content: space-between;
+  align-items: center;
 }
 
-li {
-  margin: 0.5em;
-  padding: 0.5em;
+.flex-left li , .flex li{
+  margin-left: 1em;
+}
+
+.flex li{
+  margin-right: 1em;
+}
+
+.flex, .flex-left {
+  justify-content: flex-end !important;
+  flex: 0 1 25%;
+}
+
+.logo {
+  font-size: 30px !important;
 }
