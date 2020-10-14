@@ -12,8 +12,20 @@ class Home extends Component {
 
   render() {
     return(
-      <div>
-        <h1> Home </h1>
+      <div className="home-container">
+        <div></div>
+        <div className="feed">
+          <div className="wrapper">
+            <div className="content">
+                <img src="https://img-9gag-fun.9cache.com/photo/aqnprzv_460s.jpg"/>
+            </div>
+            <div className="content">
+                <img src="https://img-9gag-fun.9cache.com/photo/aqnprzv_460s.jpg"/>
+            </div>
+
+          </div>
+        </div>
+        <div></div>
       </div>
     );
   }
