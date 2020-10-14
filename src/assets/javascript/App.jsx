@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import Main from './components/Main';
+import {Route, Link, Switch, BrowserRouter as Router} from 'react-router-dom';
 import '../stylesheets/App.css';
-
+import NavBar from './components/nav/NavBar';
+import Home from './components/home/Home';
+import Profile from './components/profile/Profile';
 
 class App extends Component {
   constructor( props ) {
@@ -15,10 +17,14 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
-        <title>{this.state.title}</title>
-        <Main title={this.state.title} />
-      </div>
+      <Router>
+          <title>{this.state.title}</title>
+          <div className="container">
+            <NavBar title={ this.state.title }/>
+            <Route exact path="/" component={ Home }/>
+            <Route exact path="/profile" component={ Profile }/>
+          </div>
+      </Router>
     );
   }
 }
