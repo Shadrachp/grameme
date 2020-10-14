@@ -12,7 +12,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <>
+      <div className="nav">
         <ul className="nav-container">
           <div className="flex-left">
             <li className="logo">
@@ -21,7 +21,7 @@ class NavBar extends Component {
           </div>
           <div className="flex">
             <li>
-              
+
             </li>
             <li>
               Log in
@@ -31,7 +31,7 @@ class NavBar extends Component {
             </li>
           </div>
         </ul>
-      </>
+      </div>
     );
   }
 }
