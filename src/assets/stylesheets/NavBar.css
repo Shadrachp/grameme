@@ -47,4 +47,6 @@ ul, .flex {
 .logo {
   font-size: 30px !important;
   font-weight: bold;
+  text-decoration: none;
+  color: black; 
 }
