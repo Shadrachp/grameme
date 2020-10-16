@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../../stylesheets/NavBar.css';
+import { Link } from 'react-router-dom'
 
 class NavBar extends Component {
   constructor( props ) {
@@ -15,8 +16,8 @@ class NavBar extends Component {
       <div className="nav">
         <ul className="nav-container">
           <div className="flex-left">
-            <li className="logo">
-              Grameme
+            <li>
+              <Link className="logo" to="/">Grameme</Link> 
             </li>
           </div>
           <div className="flex">
