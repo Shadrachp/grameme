@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "../../../stylesheets/home.css";
 import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 
@@ -20,8 +19,8 @@ class Home extends Component {
           <div className="feed">
             <div className="wrapper">
               <div className="content">
-                <Image
-                  publicId="https://res.cloudinary.com/dk19dzivc/image/upload/v1602716213/samples/ecommerce/accessories-bag.jpg"
+                <img
+                  src="https://res.cloudinary.com/dk19dzivc/image/upload/v1602716213/samples/ecommerce/accessories-bag.jpg"
                 />
               </div>
               <div className="content">

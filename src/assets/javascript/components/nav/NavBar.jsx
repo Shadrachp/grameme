@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import '../../../stylesheets/NavBar.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
   constructor( props ) {
@@ -17,7 +16,7 @@ class NavBar extends Component {
         <ul className="nav-container">
           <div className="flex-left">
             <li>
-              <Link className="logo" to="/">Grameme</Link> 
+              <Link className="logo" to="/">Grameme</Link>
             </li>
           </div>
           <div className="flex">
@@ -27,10 +26,10 @@ class NavBar extends Component {
             <li>
               Log in
             </li>
-            <li>
+            <li id="sign-up">
               Sign up
             </li>
-          </div>
+         </div>
         </ul>
       </div>
     );
