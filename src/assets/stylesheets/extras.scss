@@ -1,0 +1,122 @@
+$circle: 40px;
+$arrow-color: #707070;
+
+.extras-container {
+  position: relative;
+  display: flex;
+
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  left: 15px;
+
+  color: $arrow-color;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+
+
+
+.extras {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+
+  height: $circle;
+  width: $circle;
+
+  border-radius: 100%;
+
+  top: 30px;
+  left: 15px;
+
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+}
+
+.extras-2 {
+  position: relative;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+  width: 40px;
+}
+
+.extras-2:hover {
+  animation-name: extras;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
+}
+
+.extras-grid {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.extras-grid > div:last-child {
+  position: relative;
+  left: 6px;
+}
+
+.extras-2 > div {
+  position: relative;
+  display: flex;
+
+  transition: 2s;
+
+  width: 20px;
+  height: 4px;
+  background-color: $arrow-color;
+}
+
+.extras-2 div:first-child {
+  transform: rotate(-45deg);
+  left: 4.2px;
+}
+
+.extras-2 div:last-child {
+  transform: rotate(45deg);
+  right: 4.2px;
+}
+
+.dislike-extras{
+  flex-direction: row-reverse;
+}
+
+.dislike-extras div:first-child {
+  left: -4.2px;
+
+}
+
+.dislike-extras div:last-child {
+  right: -4.2px;
+}
+
+.dislike-extras:hover {
+  animation-name: dislike-extras;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
+}
+
+.extras-label {
+  color: #fff;
+}
+
+@keyframes extras {
+  from {bottom: 0px;}
+  to {bottom: 5px; height: 60px;}
+}
+
+@keyframes dislike-extras {
+  from {top: 0px;}
+  to {top: 5px; height: 60px;}
+}
