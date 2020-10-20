@@ -2,12 +2,12 @@ import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import App from './assets/javascript/App';
 import * as serviceWorker from './serviceWorker';
-import './assets/stylesheets/index.css';
-import './assets/stylesheets/App.css';
-import './assets/stylesheets/navbar.css';
-import "./assets/stylesheets/burger.css";
-import "./assets/stylesheets/feed.css";
-
+import './assets/stylesheets/index.scss';
+import './assets/stylesheets/App.scss';
+import './assets/stylesheets/navbar.scss';
+import "./assets/stylesheets/burger.scss";
+import "./assets/stylesheets/feed.scss";
+import "./assets/stylesheets/extras.scss";
 
 ReactDOM.render(
   <StrictMode>

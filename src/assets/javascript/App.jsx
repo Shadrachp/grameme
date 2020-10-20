@@ -28,12 +28,18 @@ class App extends Component {
           <title>{this.state.title}</title>
           <div className="container">
             <NavBar title={ this.state.title }/>
-            <Route exact path="/" render={()=>(
-                <Home {...this.state} />
+            <Route
+              exact path="/"
+              render={()=>(
+                <Home
+                  {...this.state} 
+                />
               )}
              />
             <Route exact path="/profile" render={() => (
-                <Profile cloudName={this.state.cloudName} uploadPreset={this.state.uploadPreset}/>
+                <Profile
+                  {...this.state}
+                />
               )}
             />
           </div>

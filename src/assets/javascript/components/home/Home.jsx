@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import {Image, Transformation, CloudinaryContext} from 'cloudinary-react';
-
+import Extras from './Extras'
 
 class Home extends Component {
   constructor(props) {
     super( props );
-    console.log(this.props);
+
+    this.state = {
+      
+    }
   }
 
   render() {
@@ -19,24 +22,28 @@ class Home extends Component {
           <div className="feed">
             <div className="wrapper">
               <div className="content">
-                <img
+                <Image className="content-image"
                   src="https://res.cloudinary.com/dk19dzivc/image/upload/v1602716213/samples/ecommerce/accessories-bag.jpg"
                 />
+                <Extras/>
               </div>
               <div className="content">
-                <Image
+                <Image className="content-image"
                   publicId="https://res.cloudinary.com/dk19dzivc/image/upload/v1602853429/grameme/paa1wgdwiolpmhxi9fsz.jpg"
                 />
+                <Extras/>
               </div>
               <div className="content">
-                <Image
+                <Image className="content-image"
                   publicId="https://res.cloudinary.com/dk19dzivc/image/upload/v1602853493/grameme/rczub12eexn6apto74xb.jpg"
                 />
+                <Extras/>
               </div>
               <div className="content">
-                <Image
+                <Image className="content-image"
                   publicId="https://res.cloudinary.com/dk19dzivc/image/upload/v1602853785/grameme/lqbcjdqsdwxmzjt0rnan.jpg"
                 />
+                <Extras/>
               </div>
             </div>
           </div>
