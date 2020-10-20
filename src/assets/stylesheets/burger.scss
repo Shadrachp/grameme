@@ -1,0 +1,64 @@
+.toggle {
+  z-index: 3;
+  top: 1.9rem;
+  right: 0.84rem;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+
+}
+
+.burger {
+  opacity: 100 !important;
+
+  position:absolute;
+  height: 50px;
+  width: 50px;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger > div{
+  opacity: 100 !important;
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 1.5px;
+  transition: all 0.25s ease;
+}
+
+.burger>div::before, .burger>div::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 1.5px;
+  transition: all 0.25s ease;
+}
+
+.burger > div::before {
+  top: -10px;
+
+}
+
+.burger > div::after {
+  top: 10px;
+}
+
+.toggle:checked + .burger div {
+  transform: rotate(-135deg);
+
+}
+
+
+.toggle:checked + .burger > div::before, .toggle:checked + .burger > div::after {
+  transform: rotate(-90deg);
+  top: 0px;
+}
