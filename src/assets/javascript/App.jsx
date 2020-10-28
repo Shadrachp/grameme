@@ -5,47 +5,45 @@ import NavBar from './components/nav/NavBar';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
 
-class App extends Component {
-  constructor( props ) {
-    super( props );
 
-    this.state = ({
-      title: 'Grameme',
-      cloudName: config.cloud_name,
-      uploadPreset: config.upload_preset
-    });
+
+const App = () => {
+  const title = "Grameme";
+  const cloudinary_config =  {
+                              cloudName: config.cloud_name,
+                              uploadPreset: config.upload_preset
+                             };
+
 
     // this.props.history.push({
     //   pathname: '/Profile',
     //   cloudName: cloud_name,
     //   uploadPreset: upload_preset, // your data array of objects
     // });
-  }
 
-  render() {
-    return (
+
+  return (
       <Router>
-          <title>{this.state.title}</title>
+          <title>{ title }</title>
           <div className="container">
-            <NavBar title={ this.state.title }/>
+            <NavBar title={ title }/>
             <Route
               exact path="/"
               render={()=>(
                 <Home
-                  {...this.state} 
+                  {...cloudinary_config}
                 />
               )}
              />
             <Route exact path="/profile" render={() => (
                 <Profile
-                  {...this.state}
+                  {...cloudinary_config}
                 />
               )}
             />
           </div>
       </Router>
-    );
-  }
+  );
 }
 
 export default App;

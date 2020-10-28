@@ -58,6 +58,14 @@ $shadow: #282828;
   color: white;
 }
 
+.btn{
+  cursor: pointer;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
 #sign-up::before {
   content: "";
   border-left: 1px solid rgba(186,186,186,.5);
