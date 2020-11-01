@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const LoginButton = () => {
 
   return (
-    <div className="btn">Log In</div>
+    <>
+      Log In
+    </>
   );
 };
 
