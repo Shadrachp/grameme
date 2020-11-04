@@ -11,7 +11,7 @@ const Extras = (props) =>{
             </div>
           </div>
           <div>
-            <label className="extras-label">16</label>
+            <label className="extras-label">{props.upvote}</label>
           </div>
         </div>
         <div className="extras-grid">
@@ -22,7 +22,7 @@ const Extras = (props) =>{
             </div>
           </div>
           <div>
-            <label className="extras-label">10</label>
+            <label className="extras-label">{props.downvote}</label>
           </div>
         </div>
       </div>

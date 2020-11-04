@@ -30,11 +30,23 @@ class Home extends Component {
           <div className="feed">
             <div className="wrapper">
               {this.state.posts.map((post, index) =>
-                <div key={index} className="content">
-                  <Image className="content-image"
-                    src={post.img_link}
-                  />
-                  <Extras/>
+                <div className="post-container">
+                  <div className="post">
+                  <hr/>
+                    <div className="post-title">{post.title}</div>
+                    <div className="content-container">
+                      <div key={index} className="content">
+                        <Image className="content-image"
+                          src={post.img_link}
+                        />
+                        <Extras upvote={post.upvote} downvote={post.downvote}/>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="comments-container">
+
+                  </div>
+
                 </div>
               )}
             </div>
