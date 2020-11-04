@@ -3,9 +3,10 @@ $shadow: #282828;
 .nav{
   position: sticky;
   top: 0;
-  background-color: #121212;
+  // background-color: #121212;
+  background-color: #fff;
   z-index: 999;
-  color: white;
+  color: black;
 }
 
 .nav-container {
@@ -55,7 +56,7 @@ $shadow: #282828;
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .btn{
