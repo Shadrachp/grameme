@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import NavAuth from './user/NavAuth';
+
 
 class NavBar extends Component {
   constructor( props ) {
@@ -21,14 +23,8 @@ class NavBar extends Component {
           </div>
           <div className="flex">
             <li>
-
             </li>
-            <li>
-              Log in
-            </li>
-            <li id="sign-up">
-              Sign up
-            </li>
+            <NavAuth/>
          </div>
         </ul>
       </div>
