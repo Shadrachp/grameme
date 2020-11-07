@@ -29,13 +29,13 @@ class Home extends Component {
         <div className="home-container">
           <div className="feed">
             <div className="wrapper">
-              {this.state.posts.map((post, index) =>
-                <div className="post-container">
+              {this.state.posts.map(post =>
+                <div key={post.post_id} className="post-container">
                   <div className="post">
                   <hr/>
                     <div className="post-title">{post.title}</div>
                     <div className="content-container">
-                      <div key={index} className="content">
+                      <div className="content">
                         <Image className="content-image"
                           src={post.img_link}
                         />
