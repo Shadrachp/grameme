@@ -2,10 +2,10 @@ import React from 'react';
 import DefaultNav from './default/DefaultNav';
 
 
-const NavAuth = () => {
+const NavAuth = (props) => {
 
   return (
-     <DefaultNav/>
+     <DefaultNav show={ props.show }/>
   )
 }
 
