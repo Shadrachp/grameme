@@ -7,9 +7,7 @@ class NavBar extends Component {
   constructor( props ) {
     super( props );
 
-    this.state = {
 
-    }
   }
 
   render() {
@@ -24,7 +22,7 @@ class NavBar extends Component {
           <div className="flex">
             <li>
             </li>
-            <NavAuth/>
+            <NavAuth show={this.props.show}/>
          </div>
         </ul>
       </div>

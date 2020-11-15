@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Route, Link, Switch, BrowserRouter as Router} from 'react-router-dom';
 import config from '../../config/config';
 import NavBar from './components/nav/NavBar';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
+import FormModal from './components/modal/FormModal';
 
 
 
@@ -13,7 +14,14 @@ const App = () => {
                               cloudName: config.cloud_name,
                               uploadPreset: config.upload_preset
                              };
+  const [showModal, setShowModal] = useState(false);
+  const closeModal = e => {
+    setShowModal(false);
+  };
 
+  const showModalEvent = e => {
+    setShowModal(true);
+  };
 
     // this.props.history.push({
     //   pathname: '/Profile',
@@ -26,7 +34,9 @@ const App = () => {
       <Router>
           <title>{ title }</title>
           <div className="container">
-            <NavBar title={ title }/>
+            <NavBar show={ showModalEvent } title={ title }/>
+            <div onClick={() => closeModal()} className={showModal ? "blur" : null}></div>
+              <FormModal close={ closeModal } show={ showModal }/>
             <Route
               exact path="/"
               render={()=>(
