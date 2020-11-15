@@ -1,20 +1,21 @@
-import React from 'react';
-import LoginButton from './LoginButton';
-import SignupButton from './SignupButton';
+import React, { useState } from 'react';
+import Button from './Button';
 
-const DefaultNav = () => {
+const DefaultNav = (props) => {
+
 
   return (
     <>
-      <li id="log-in">
-        <LoginButton/>
+      <li onClick={() => props.show()} id="log-in">
+        <Button  text="Log In"/>
       </li>
-      <li id="sign-up">
-        <SignupButton/>
+      <li onClick={() => props.show()} id="sign-up">
+        <Button  text="Sign Up"/>
       </li>
+
+
     </>
   );
-
 
 }
 
