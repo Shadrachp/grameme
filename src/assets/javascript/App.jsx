@@ -4,7 +4,7 @@ import config from '../../config/config';
 import NavBar from './components/nav/NavBar';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
-import FormModal from './components/modal/FormModal';
+import FormModal from './components/modal/FormModal.jsx';
 
 
 
@@ -35,7 +35,9 @@ const App = () => {
           <title>{ title }</title>
           <div className="container">
             <NavBar show={ showModalEvent } title={ title }/>
-            <div onClick={() => closeModal()} className={showModal ? "blur" : null}></div>
+            <div onClick={ closeModal }
+                className={ showModal ? "blur" : null}>
+            </div>
               <FormModal close={ closeModal } show={ showModal }/>
             <Route
               exact path="/"
