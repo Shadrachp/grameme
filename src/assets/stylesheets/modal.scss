@@ -1,6 +1,8 @@
 $val:100%;
 $pos:fixed;
 $mg:8px;
+$mg-input: 1.5rem;
+$mg-input-2: 0.8rem;
 $close: 22px;
 
 .modal-container {
@@ -11,35 +13,45 @@ $close: 22px;
   position: $pos;
   align-self: center;
 
-  top: 30%;
+  top: 20%;
   z-index: 2;
 
-  width: 700px;
-  height: 400px;
+  width: 350px;
+  height: 450px;
 
   border-radius: 4px;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border: 1px solid #292929;
+  border-bottom-color: #121212;
 
-  background-color: #121212;
+  background-image: linear-gradient(#121212, #202020);
   color: #fff;
 }
 
+.blur {
+  position: $pos;
+  height: $val;
+  width: $val;
+  z-index: 1;
+  cursor: pointer;
+
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/********************************
+    Start of modal header css
+ ********************************/
 .modal-header {
   align-self: flex-end;
   display: flex;
   justify-content: flex-end;
 }
 
-
-
 .close-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 
   width:$close;
   height:$close;
@@ -53,13 +65,119 @@ $close: 22px;
   z-index: 2;
 }
 
+/********************************
+    End of modal header css
+ ********************************/
 
-.blur {
-  position: $pos;
-  height: $val;
-  width: $val;
-  z-index: 1;
-  cursor: pointer;
+ /********************************
+     Start of modal body css
+  ********************************/
 
-  background-color: rgba(0, 0, 0, .5);
+.modal-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  flex: 0 1 80%;
+  width: 100%;
 }
+
+.modal-body-tabs,
+.modal-body-input,
+.modal-body-extras {
+  align-self:center;
+  width: 60%;
+  flex-basis: 35%;
+}
+
+.modal-body-tabs {
+  flex-basis: 10%;
+  display:flex;
+  flex-flow: column nowrap;
+
+
+  border-style: solid;
+  border-width: 1px;
+
+  border-left-style: none;
+  border-right-style: none;
+
+
+  height: 20%;
+
+  margin-top: $mg-input;
+  margin-bottom: $mg-input;
+}
+
+.modal-body-tabs {
+
+
+}
+
+.modal-input-email,
+.modal-input-password {
+  width: 100%;
+
+  margin-top: $mg-input-2;
+  margin-bottom: $mg-input-2;
+}
+
+.body-tabs,
+.form-username,
+.form-password {
+  display: flex;
+  flex-flow: row nowrap;
+
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.form-username,
+.form-password {
+  color: black;
+  cursor: text;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.modal-body-input input  {
+  width: 100%;
+  font-size: 16px;
+
+  border-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: white;
+
+  color: white;
+  background-color: transparent;
+  opacity: 0.5;
+
+  margin-top: $mg-input-2;
+  margin-bottom: $mg-input-2;
+}
+
+input:invalid {
+  box-shadow:none;
+  border-color: red;
+}
+
+.modal-body-input input:focus,
+.modal-body-input label {
+  opacity: 0.8;
+
+}
+
+.modal-body-input label {
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: bolder;
+
+}
+
+
+
+  /********************************
+      End of modal body css
+   ********************************/
