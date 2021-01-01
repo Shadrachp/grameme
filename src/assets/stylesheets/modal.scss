@@ -32,8 +32,6 @@ $close: 22px;
   height: $val;
   width: $val;
   z-index: 1;
-  cursor: pointer;
-
   background-color: rgba(0, 0, 0, .5);
 }
 
@@ -109,8 +107,14 @@ $close: 22px;
 }
 
 .modal-body-tabs {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
 
-
+.modal-body-tabs div:first-child {
+  background-color: #fff;
 }
 
 .modal-input-email,
@@ -166,16 +170,59 @@ input:invalid {
 .modal-body-input input:focus,
 .modal-body-input label {
   opacity: 0.8;
-
 }
 
 .modal-body-input label {
-  font-size: 12px;
+  font-size: 14px;
   font-family: monospace;
   font-weight: bolder;
-
 }
 
+.remember-me {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 12px;
+}
+
+.remember-me div {
+  height: 10px;
+  width: 10px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: #242424;
+
+  background-color: #fff;
+
+  // <div className="remember-me">
+  //   <div></div>
+  //   <label>Remember me</label>
+  // </div>
+}
+
+
+
+.remember-me label {
+  margin-left: $mg;
+}
+
+.modal-body-extras {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-submit {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.modal-submit div {
+  background-color: black;
+  width: 100%;
+}
 
 
   /********************************

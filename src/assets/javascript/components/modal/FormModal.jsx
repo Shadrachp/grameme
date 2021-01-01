@@ -30,24 +30,27 @@ const FormModal = (props) => {
         </div>
         <div className="modal-body">
             <div className="modal-body-tabs">
-
+                <div>Login</div>
+                <div>Sign Up</div>
             </div>
             <div className="modal-body-input">
               <div className="modal-input-email">
-                <label>U S E R N A M E</label>
+                <label>Email</label>
                 <input type="email" />
               </div>
               <div className="modal-input-email">
-                <label>P A S S W O R D</label>
+                <label>Password</label>
                 <input type="password"/>
               </div>
             </div>
             <div className="modal-body-extras">
-              <div>test3</div>
-              <div>test3</div>
+              <div className="modal-submit">
+                <div>Login</div>
+              </div>
             </div>
         </div>
         <div className="modal-footer">
+
             <div>test3</div>
         </div>
       </div>

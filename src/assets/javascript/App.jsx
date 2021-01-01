@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Route, Link, Switch, BrowserRouter as Router} from 'react-router-dom';
-import config from '../../config/config';
+//import config from '../../config/config';
 import NavBar from './components/nav/NavBar';
 import Home from './components/home/Home';
 import Profile from './components/profile/Profile';
@@ -11,8 +11,8 @@ import FormModal from './components/modal/FormModal.jsx';
 const App = () => {
   const title = "Grameme";
   const cloudinary_config =  {
-                              cloudName: config.cloud_name,
-                              uploadPreset: config.upload_preset
+                              cloudName: 'test',
+                              uploadPreset: 'test'
                              };
   const [showModal, setShowModal] = useState(false);
   const closeModal = e => {
